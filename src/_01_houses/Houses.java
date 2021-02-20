@@ -7,7 +7,19 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class Houses {
 Robot rob = new Robot();
-void flatHouse() {
+void flatHouse(String height) 
+{
+	if (height.equalsIgnoreCase("small")) {
+		int tall = Integer.parseInt(height);
+		tall = 60;
+	}
+	if (height.equalsIgnoreCase("medium")) {
+		int tall = Integer.parseInt(height);
+		tall = 120;
+	}
+	if (height.equalsIgnoreCase("large")) {
+		int tall = Integer.parseInt(height);
+	}
 	//first flat topped house
 	rob.setPenColor(Color.BLACK);
 	rob.move(100);
@@ -29,7 +41,7 @@ void flatHouse() {
 	rob.setSpeed(10);
 
 for (int i = 0; i < 10; i++) {
-	flatHouse();
+	
 }
 
 	}
